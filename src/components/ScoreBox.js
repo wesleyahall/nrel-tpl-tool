@@ -1,30 +1,44 @@
 import React, { Component } from 'react'
-
+import { connect } from 'react-redux'
+import { Row, Col, Progress } from 'reactstrap'
+import '../styles/ScoreBox.css'
 
 class ScoreBox extends Component {
-    constructor (props) {
-        super(props)
-        this.state = {
-            licenseSettings: null,
-            infile: null,
-            settings: null,
-            items: null,
-            catalogItems: null,
-            signature: null,
-            scanMode: null,
-            scanCount: null,
-            itemsChanged: null,
-            isFinishedLoading: false
-        }
-    }
 
     render() {
+        const borderSize = (this.props.overall_progress === 0)  ? '1px solid #000' : 0;
+        const styles = {
+            border: borderSize
+        }
         return (
-              <div>
-                  ScoreBox Component
-              </div>
+            <section className="ScoreBox">
+                <h2>Current TPL <br/> Score: <span id="OverallScore">{this.props.tpl_score}</span></h2>
+                <div className="ScoreBox__Legend">
+                    TPL Scoring <br/>
+                    Low: 0-3&nbsp;&nbsp;Medium: 4-6&nbsp;&nbsp;High: 7-9
+                </div>
+                <div className="ScoreBox__ProgressBar">
+                    <Row>
+                        <Col md="4">
+                            Progress
+                        </Col>
+                        <Col>
+                            <div className="ProgressBar" style={styles}>
+                                <Progress className="justify-content-end OverallProgress" value={this.props.overall_progress}/>
+                            </div>
+                        </Col><
+                    /Row>
+                </div>
+            </section>
         )
     }
 }
 
-export default ScoreBox
+const mapStateToProps = (state) => {
+    return {
+        tpl_score: state.tpl_score,
+        overall_progress: state.overall_progress
+    }
+}
+
+export default connect(mapStateToProps)(ScoreBox);

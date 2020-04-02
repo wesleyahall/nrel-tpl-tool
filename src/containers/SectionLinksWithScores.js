@@ -20,7 +20,7 @@ class SectionLinksWithScores extends Component {
 
     render() {
         return (
-              <div>
+              <div className="SectionLinksWithScores">
                   SectionLinksWithScores Component
               </div>
         )

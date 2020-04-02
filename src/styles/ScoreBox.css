@@ -1,0 +1,33 @@
+.ScoreBox {
+    text-align: center;
+    font-size: 1em; 
+    color: #333;
+    background-color: #ededed;
+    padding: 8px;
+}
+
+.ScoreBox h2 {
+    color: #333;
+    font-size: 1.6em;
+}
+
+.ScoreBox__Legend {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.ScoreBox__ProgressBar {
+    line-height: 1.2em;
+    margin: 6px 0;
+}
+
+.OverallProgress {
+    line-height: 1.2em;
+}
+
+.progress-bar {
+    background-color: #539536 !important;
+}
+.progress {
+    background-color: #d5d7d8 !important;
+}

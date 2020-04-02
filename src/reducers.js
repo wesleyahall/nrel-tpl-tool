@@ -1,6 +1,7 @@
 const INITIAL_STATE = {
     helloText: '',
-    score: 0
+    tpl_score: 0,
+    overall_progress: 15
 }
 
 export default (state = INITIAL_STATE, action) => {

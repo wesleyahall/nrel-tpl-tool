@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import {Col} from 'reactstrap'
 
 class TopLevelSection extends Component {
     constructor (props) {
@@ -20,9 +20,9 @@ class TopLevelSection extends Component {
 
     render() {
         return (
-              <div>
+              <Col>
                   TopLevelSection Component
-              </div>
+              </Col>
         )
     }
 }

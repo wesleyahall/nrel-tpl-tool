@@ -5,37 +5,22 @@ import SectionLinksWithScores from './SectionLinksWithScores'
 import TopLevelSection from '../components/TopLevelSection'
 import {
     Container,
-    Row
+    Row,
+    Col
 } from 'reactstrap'
 
-import { sayHello } from '../actions'
-
-
 class PerformanceTool extends Component {
-    constructor (props) {
-        super(props)
-        this.state = {
-            licenseSettings: null,
-            infile: null,
-            settings: null,
-            items: null,
-            catalogItems: null,
-            signature: null,
-            scanMode: null,
-            scanCount: null,
-            itemsChanged: null,
-            isFinishedLoading: false
-        }
-    }
-
     render() {
         return (
-              <div>
+              <div className="PerformanceTool" style={{margin: '20px 0px'}}>
                 <Container>
                     <Row>
-                        <div onClick={this.props.sayHello}>TEST</div>
-                        <ScoreBox />
-                        <SectionLinksWithScores />
+                        <Col>
+                            <ScoreBox />
+                        </Col>
+                        <Col>
+                            <SectionLinksWithScores />
+                        </Col>
                     </Row>
                 </Container>
                 <TopLevelSection className="CostOfEnergy" />
@@ -50,4 +35,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {sayHello})(PerformanceTool);
+export default connect(mapStateToProps)(PerformanceTool);
