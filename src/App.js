@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
     Collapse,
     Navbar,
@@ -12,21 +12,21 @@ import {
     Col,
     Jumbotron,
     Button
-} from 'reactstrap';
+} from 'reactstrap'
 
 class App extends Component {
     constructor(props) {
-        super(props);
+        super(props)
 
-        this.toggle = this.toggle.bind(this);
+        this.toggle = this.toggle.bind(this)
         this.state = {
             isOpen: false
-        };
+        }
     }
     toggle() {
         this.setState({
             isOpen: !this.state.isOpen
-        });
+        })
     }
     render() {
         return (
@@ -66,8 +66,8 @@ class App extends Component {
                     </Container>
                 </Jumbotron>
             </div>
-        );
+        )
     }
 }
 
-export default App;
+export default App
