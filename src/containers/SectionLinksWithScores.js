@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import '../styles/SectionLinksWithScores.css'
 
 class SectionLinksWithScores extends Component {
     constructor (props) {

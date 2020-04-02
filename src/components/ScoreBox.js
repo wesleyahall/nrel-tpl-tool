@@ -22,9 +22,9 @@ class ScoreBox extends Component {
                         <Col md="4">
                             Progress
                         </Col>
-                        <Col>
+                        <Col md="8">
                             <div className="ProgressBar" style={styles}>
-                                <Progress className="justify-content-end OverallProgress" value={this.props.overall_progress}/>
+                                <Progress animated className="OverallProgress" value={this.props.overall_progress}/>
                             </div>
                         </Col><
                     /Row>
