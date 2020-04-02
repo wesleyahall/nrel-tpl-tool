@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.HeaderName a {
+  color: #4B545A;
+  display: block;
+  font-family: Roboto;
+  font-size: 1.5rem;
+  line-height: 1.2em;
+  margin: 0 0 .3em;
+  text-align: left;
+  text-decoration: none;
+  margin: 24px 0;
+}
+
+.HeaderImage {
+  text-align: right;
+}
+
+.HeaderImage img {
+  float: right;
+  max-width: 277px;
+  margin-bottom: 40px;
+}
+
+.MainNavigation {
+  text-align: left;
+  background-color: #ededed;
+}
+.nav-link {
+  color: #5e6a71;
+}
+
+ 
