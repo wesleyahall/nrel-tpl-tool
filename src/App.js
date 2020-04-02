@@ -1,29 +1,20 @@
 import React, { Component } from 'react'
 import {
     Container,
-    Row,
-    Col
+    Row
 } from 'reactstrap'
+import PerformanceTool from './PerformanceTool'
 
 class App extends Component {
-    constructor(props) {
-        super(props)
-
-        this.toggle = this.toggle.bind(this)
-        this.state = {
-            isOpen: false
-        }
-    }
-    toggle() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        })
-    }
     render() {
         return (
-            <div>
-              Hello World
-            </div>
+          <Container>
+            <Row>
+              <div>
+                <PerformanceTool />
+              </div>
+            </Row>
+          </Container>
         )
     }
 }

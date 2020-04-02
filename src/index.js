@@ -13,7 +13,7 @@ ReactDOM.render(
                 <div class="row">
 
                     <div class="HeaderName col-md-6">
-                        <a href="/">Technology Performance Level Assessment <br/> Wave Energy Converters</a>
+                        <a href="/">Technology Performance Level Assessment Wave Energy Converters</a>
                     </div>
 
                     <div class= "HeaderImage col-md-6 justify-content-end">
