@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
-import ScoreBox from './ScoreBox'
+import { connect } from 'react-redux'
+import ScoreBox from '../components/ScoreBox'
 import SectionLinksWithScores from './SectionLinksWithScores'
-import TopLevelSection from './TopLevelSection'
+import TopLevelSection from '../components/TopLevelSection'
 import {
     Container,
     Row
 } from 'reactstrap'
+
+import { sayHello } from '../actions'
+
 
 class PerformanceTool extends Component {
     constructor (props) {
@@ -29,6 +33,7 @@ class PerformanceTool extends Component {
               <div>
                 <Container>
                     <Row>
+                        <div onClick={this.props.sayHello}>TEST</div>
                         <ScoreBox />
                         <SectionLinksWithScores />
                     </Row>
@@ -39,4 +44,10 @@ class PerformanceTool extends Component {
     }
 }
 
-export default PerformanceTool
+const mapStateToProps = (state) => {
+    return {
+        tpl_score: state.tpl_score
+    }
+}
+
+export default connect(mapStateToProps, {sayHello})(PerformanceTool);
