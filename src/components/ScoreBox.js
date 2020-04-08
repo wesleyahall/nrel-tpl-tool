@@ -19,15 +19,15 @@ class ScoreBox extends Component {
                 </div>
                 <div className="ScoreBox__ProgressBar">
                     <Row>
-                        <Col md="4">
+                        <Col md="3" className="align-right">
                             Progress
                         </Col>
-                        <Col md="8">
+                        <Col md="9">
                             <div className="ProgressBar" style={styles}>
                                 <Progress animated className="OverallProgress" value={this.props.overall_progress}/>
                             </div>
-                        </Col><
-                    /Row>
+                        </Col>
+                    </Row>
                 </div>
             </section>
         )

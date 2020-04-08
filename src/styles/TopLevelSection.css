@@ -1,0 +1,11 @@
+.TopLevelSection {
+    min-height: 245px;
+    border-bottom: 0;
+    width: 100%;
+    padding: 24px;
+}
+
+.TopLevelSection h3 a {
+    color: #000;
+}
+

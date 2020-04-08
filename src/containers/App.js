@@ -10,7 +10,7 @@ class App extends Component {
         return (
           <Container>
             <Row>
-              <div>
+              <div className="w-100">
                 <PerformanceTool />
               </div>
             </Row>
